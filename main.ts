@@ -4,7 +4,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenSwitchUp, function (
     music.powerUp.play()
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenSwitchDown, function (sprite, location) {
-    tiles.setCurrentTilemap(tilemap`level1`)
+    tiles.setCurrentTilemap(tilemap`level26`)
     tiles.placeOnRandomTile(mySprite, sprites.dungeon.chestOpen)
     music.powerDown.play()
 })
@@ -56,7 +56,7 @@ let monster = sprites.create(img`
     ........................
     ........................
     `, SpriteKind.Enemy)
-tiles.setCurrentTilemap(tilemap`level1`)
+tiles.setCurrentTilemap(tilemap`level26`)
 tiles.placeOnRandomTile(mySprite, sprites.dungeon.chestOpen)
 tiles.placeOnRandomTile(monster, sprites.dungeon.collectibleInsignia)
 scene.cameraFollowSprite(mySprite)
