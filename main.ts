@@ -1,4 +1,9 @@
-scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.purpleSwitchDown, function (sprite, location) {
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenSwitchUp, function (sprite, location) {
+    tiles.setCurrentTilemap(tilemap`level26`)
+    tiles.placeOnRandomTile(mySprite, sprites.dungeon.chestOpen)
+    music.powerUp.play()
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.greenSwitchDown, function (sprite, location) {
     tiles.setCurrentTilemap(tilemap`level1`)
     tiles.placeOnRandomTile(mySprite, sprites.dungeon.chestOpen)
     music.powerDown.play()
@@ -8,11 +13,6 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sp
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.hazardLava1, function (sprite, location) {
     game.over(false)
-})
-scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.purpleSwitchUp, function (sprite, location) {
-    tiles.setCurrentTilemap(tilemap`level1`)
-    tiles.placeOnRandomTile(mySprite, sprites.dungeon.chestOpen)
-    music.powerUp.play()
 })
 let mySprite: Sprite = null
 game.splash("A maze, flick the lever  ", "to")
