@@ -15,6 +15,9 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.purpleSwitchUp, function 
     music.powerUp.play()
 })
 let mySprite: Sprite = null
+game.splash("A maze, flick the lever  ", "to")
+game.splash("get to the closed chest")
+game.splash("Get to the closed chest ", "to win")
 mySprite = sprites.create(img`
     . . . 6 6 . . . . 
     . . . . 6 . . . . 
